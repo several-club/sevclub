@@ -19,7 +19,7 @@
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.several.club" }],
-      "destination": "https://several.club/:1",
+      "destination": "https://several.club/$1",
       "permanent": true
     }
   ]
