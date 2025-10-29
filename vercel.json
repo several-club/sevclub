@@ -3,13 +3,13 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/(.*)\\.(?:avif|webp|jpg|jpeg|png|svg|gif|mp4|webm)",
+      "source": "/:path*\\.(avif|webp|jpg|jpeg|png|svg|gif|mp4|webm)",
       "headers": [
         { "key": "cache-control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/(.*)\\.html",
+      "source": "/:path*.html",
       "headers": [
         { "key": "cache-control", "value": "public, max-age=0, must-revalidate" }
       ]
@@ -17,9 +17,9 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "www.several.club" }],
-      "destination": "https://several.club/$1",
+      "destination": "https://several.club/:path*",
       "permanent": true
     }
   ]
