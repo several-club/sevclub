@@ -1,0 +1,12 @@
+{
+  "name": "several-club",
+  "version": "1.0.0",
+  "description": "Several Club website with live reload",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html --watch=.",
+    "start": "live-server --port=3000 --open=/index.html --watch=."
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
