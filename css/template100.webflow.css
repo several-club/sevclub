@@ -1570,26 +1570,21 @@ figcaption {
   box-sizing: border-box;
 }
 
-.half-width-container img,
-.half-width-container video {
-  flex: 1 1 calc(50% - 0.5rem);
-  height: auto;
+.half-width-container > picture,
+.half-width-container > img,
+.half-width-container > video {
+  flex: 1 1 0%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   min-width: 0;
-  max-width: calc(50% - 0.5rem);
 }
 
-/* Responsive - stack half width images on mobile */
+/* Responsive - keep two columns on mobile */
 @media screen and (max-width: 767px) {
   .half-width-container {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .half-width-container img {
-    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 
